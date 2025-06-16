@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapel Stay - Booking</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Chapel Stay</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/tours">Tours</a> |
+        <a href="/booking">Booking</a>
+    </nav>
+</header>
+<main>
+    <h2>Book Your Stay</h2>
+    {{ bookings_table }}
+    <h3>Request a Booking</h3>
+    <form method="POST" action="/booking">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Start Date: <input type="date" name="start" required></label><br>
+        <label>End Date: <input type="date" name="end" required></label><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p>You can subscribe to our calendar: <a href="/bookings.ics">Download ICS</a></p>
+</main>
+<footer>
+    <p>&copy; 2024 Chapel Stay</p>
+</footer>
+</body>
+</html>
